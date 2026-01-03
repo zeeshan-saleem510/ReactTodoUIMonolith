@@ -1,7 +1,7 @@
 trigger:
 - main
 
-pool: Agent-Pipeline
+pool: Agent VM Pipeline
 
 stages:
 - stage: SoftwareCompositionAnalysis
