@@ -1,7 +1,7 @@
 trigger:
 - main
 
-pool: Hosted Agent
+pool: Agent-Pipeline
 
 stages:
 - stage: SoftwareCompositionAnalysis
