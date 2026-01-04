@@ -106,7 +106,7 @@ stages:
         artifact: 'todo-ui'
         publishLocation: 'pipeline'
 
-- stage: 
+- stage: DeploytoDevVM
   displayName: Deploy to Dev VM
   jobs: 
   - job: Deploy
