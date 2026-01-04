@@ -6,16 +6,16 @@ pool: Agent VM Pipeline
 stages:
 
 
-- stage: StaticCodeAnalysis
-  displayName: Static Code Analysis
-  jobs: 
-  - job: SonarQubeAnalysis
-    displayName: Static Code Analysis (SonarQube)
-    steps:
-    - task: PowerShell@2
-      inputs:
-        targetType: 'inline'
-        script: 'sonar -D sonar.host.url=http://localhost:9000 -D sonar.token=**** -D sonar.projectKey=TodoPipeline'
+# - stage: StaticCodeAnalysis
+#   displayName: Static Code Analysis
+#   jobs: 
+#   - job: SonarQubeAnalysis
+#     displayName: Static Code Analysis (SonarQube)
+#     steps:
+#     - task: PowerShell@2
+#       inputs:
+#         targetType: 'inline'
+#         script: 'sonar -D sonar.host.url=http://localhost:9000 -D sonar.token=**** -D sonar.projectKey=TodoPipeline'
 
 - stage: SoftwareCompositionAnalysis
   displayName: Software Composition Analysis (Dependency Security)
@@ -31,7 +31,7 @@ stages:
           npm install -g retire
           npm install
           retire --exitwith 0
-          
+
 - stage: CodeQualityChecks
   displayName: Code Quality & Linting
   jobs:
